@@ -1,0 +1,105 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.wrapper {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.content {
+    flex: 1;
+}
+
+footer {
+    background: teal;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+.bi-mortarboard, .bi-briefcase-fill, .bi-people-fill {
+    color: #6495EDFF;
+}
+
+.overlay-container {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 0;
+    overflow-x: hidden;
+    transition: width 0.5s ease-in-out;
+    z-index: 1100;
+    background-color: gray;
+}
+
+.overlay-content {
+    position: relative;
+    top: 0%;
+    width: 100%;
+    height: 100%;
+    text-align: left;
+    padding: 20px;
+}
+
+.overlay-content a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 20px;
+    color: black;
+    display: block;
+    transition: 0.3s;
+}
+
+.overlay-content a:hover {
+    color: orange;
+}
+
+.overlay-close {
+    position: absolute;
+    top: 1px;
+    right: 25px;
+    font-size: 50px;
+    color: blue;
+    cursor: pointer;
+    transition: 0.3s;
+    display: none;
+}
+
+.navbar {
+    z-index: 1000;
+}
+
+@media only screen and (min-width: 768px) {
+    .navbar-toggler {
+        display: none;
+    }
+    .navbar-nav {
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+    }
+    .navbar-nav a {
+        padding: 0 15px;
+    }
+}
+
+@media only screen and (max-width: 991px) {
+    .navbar-toggler {
+        display: block;
+    }
+    .navbar-nav {
+        display: none;
+    }
+}
+
+.carousel-control-next,
+.carousel-control-prev {
+    filter: invert(100%);
+}
